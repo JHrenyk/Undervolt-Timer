@@ -1,0 +1,17 @@
+#!/bin/bash
+
+source "/home/jhrenyk/.local/lib/python2.7/site-packages/config"
+GPU=$(prime-select query)
+
+#detect GPU profile
+# Used in my Laptop. 
+# Running games seems to not be very frendly with my undervolt so I add a bit of voltage back.
+
+if [[ "${GPU}" = nvidia ]]
+	then
+		undervolt --core "${CORE2}" --cache "${CORE2}" --gpu "${GPU2}"
+	else
+		undervolt --core "${CORE1}" --cache "${CORE1}" --gpu "${GPU1}"
+fi
+
+exit 0

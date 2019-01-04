@@ -1,0 +1,10 @@
+[Unit]
+Description=Apply undervolt settings 2min after boot
+
+[Timer]
+OnBootSec=2min
+Unit=undervolt.service
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=timers.target
