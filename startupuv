@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# This script uses a config file at this location to adjust the
+# undervoltage of the core/cache and GPU. Source references the 
+# alisas from that location so the the undervolt can be easily changed.
+# This can be deleted and the desired undervolt can be applyed directly from here.
+
 source "/home/jhrenyk/.local/lib/python2.7/site-packages/config"
 
 undervolt --core "${CORE2}" --cache "${CORE2}" --gpu "${GPU2}"
